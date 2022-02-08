@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Factorial</title>
+    </head>
+    <body>
+        <input type="text" id="n" /> !
+        <button onclick="calcFakt()">=</button>
+        <span id="result"></span>
+
+        <script>
+            const n = document.getElementById("n")
+            const result = document.getElementById("result")
+
+            function calcFakt() {
+                let kod = "1"
+                let fkt = 1
+
+                for (let i = 2; i <= n.value ; i++) {
+                    fkt *= i
+                    kod += " * " + i
+                }
+                result.innerHTML = kod + " = " + fkt;
+            }
+
+        </script>
+    </body>
+</html>
